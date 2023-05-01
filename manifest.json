@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name":"AI4A11Y",
+    "version" : "1.0",
+    "description" : "Accessibility Checker",
+    "icons" : {
+        "128": "./icon/icon.png"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon" : "./icon/icon.png"
+    }
+}
