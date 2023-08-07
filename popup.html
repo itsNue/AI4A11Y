@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Extension</title>
-</head>
-<body>
-    <h1 class="flex justify-center text-lg font-semibold pt-4 pb-4">AI4A11Y</h1>
+  </head>
+  <body>
+    <h1 class="title">AI4A11Y</h1>
     <!-- Tab links -->
-    <div class="tab">
-        <button class="tablinks" id="color-contrast-btn" data-tab-value="#color-contrast">Color Contrast Checker</button>
-        <button class="tablinks" id="image-alt-btn" data-tab-value="#image-alt">Image Alt-text Checker</button>
+    <div class="tabs">
+      <div class="tab-buttons">
+        <button class="tab-button tab-button-active" data-for-tab="color">
+          Color Contrast Checker
+        </button>
+        <button class="tab-button" data-for-tab="alt-text">
+          Image Alt-text Checker
+        </button>
+      </div>
+      <!-- Tab content -->
+      <div class="tab-content tab-content-active" data-tab="color">
+        <p>
+          Click the 'Scan Page' button to analyze color contrast of this web
+          page.
+        </p>
+        <button class="btn">Scan Page</button>
+      </div>
+      <div class="tab-content" data-tab="alt-text">
+        <p>
+          Click the 'Scan Page' button to analyze all images on the current page
+          and check for missing alt text.
+        </p>
+      </div>
     </div>
-    <!-- Tab content -->
-    <div class="container">
-        <div id="color-contrast" class="tabcontent active" data-tab-info>
-            <p>Click the 'Scan Page' button to analyze all images on the current page and check for missing alt text.</p>
-        </div>
-        <div id="image-alt" class="tabcontent" data-tab-info>
-            <h2>Image Alt-text Checker</h2>
-            <p>Still a WIP</p>
-        </div>
-    </div>
-
 
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
