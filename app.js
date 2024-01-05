@@ -25,3 +25,10 @@ function setupTabs() {
 document.addEventListener("DOMContentLoaded", () => {
   setupTabs();
 });
+
+const imageBtn = document.getElementById("image-alt-btn").addEventListener('click', clear);
+
+const imageAltDiv = document.getElementById("image-alt");
+function clear() {
+  imageAltDiv.innerHTML = " ";
+}
