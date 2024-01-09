@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="popup.js"></script>
     <title>Extension</title>
   </head>
   <body>
@@ -29,16 +30,19 @@
           Click the 'Scan Page' button to analyze color contrast of this web
           page.
         </p>
-        <button class="btn">Scan Page</button>
+        <button class="btn" id="contrastButton">Scan Page</button>
+        <ul id="contrast-list"></ul>
       </div>
       <div class="tab-content" data-tab="alt-text" id="image-alt">
         <p>
           Click the 'Scan Page' button to analyze all images on the current page
           and check for missing alt text.
         </p>
-        <button class="btn" id="image-alt-btn">Scan Page</button>
+        <button class="btn" id="altButton">Scan Page</button>
+
+        <ul id="image-list"></ul>
       </div>
     </div>
-    <script src="app.js"></script>
+    <script src="altText.js"></script>
   </body>
 </html>

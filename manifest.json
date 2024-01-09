@@ -12,17 +12,21 @@
   },
   "content_scripts": [
     {
-      "js": ["./app.js"],
-      "matches": ["<all_urls>"]
+      "js": ["./altText.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_end"
     }
   ],
+  "background": {
+    "scripts": ["background.js"]
+  },
   "web_accessible_resources": [
     {
-      "resources": ["app.js"],
+      "resources": ["altText.js"],
       "matches": ["<all_urls>"]
     }
   ],
-  "permissions": ["activeTab", "storage"],
+  "permissions": ["activeTab", "storage", "webNavigation"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self';"
   }
